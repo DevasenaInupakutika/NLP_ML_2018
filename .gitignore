@@ -1,0 +1,14 @@
+nltk_data/
+gensim-data/
+tensorflow-cpu/
+.ssh
+.local
+.cache
+.Xauthority
+.bash_history
+.bash_profile
+.bashrc
+.emacs
+.kshrc
+fastText/
+.python_history/
