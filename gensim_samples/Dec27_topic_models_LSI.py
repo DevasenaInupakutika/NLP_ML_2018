@@ -1,7 +1,7 @@
-#Building topic models with LDA
+#Building topic models with LSI
 #Step 0: Load the necessary packages and import stopwords
 import gensim
-from gensim.models import LdaModel, LdaMulticore
+from gensim.models import LsiModel
 from gensim import corpora
 import gensim.downloader as api
 from gensim.utils import simple_preprocess, lemmatize
@@ -41,35 +41,13 @@ print(data_processed[0][:5])
 dct = corpora.Dictionary(data_processed)
 corpus = [dct.doc2bow(line) for line in data_processed]
 
-#Step 4: Now for building the LDA model with say 7 topics here: (number of topics is an arbitrary choice)Train the LDA model
-lda_model = LdaMulticore(corpus=corpus,
+#Step 4: Now for building the LSI model with say 7 topics here: (number of topics is an arbitrary choice)Train the LSI model
+lsi_model = LsiModel(corpus=corpus,
                          id2word=dct,
-                         random_state=100,
                          num_topics=7,
-                         passes=10,
-                         chunksize=1000,
-                         batch=False,
-                         alpha='asymmetric',
-                         decay=0.5,
-                         offset=64,
-                         eta=None,
-                         eval_every=0,
-                         iterations=100,
-                         gamma_threshold=0.001,
-                         per_word_topics=True)
-
-# save the model
-lda_model.save('lda_model.model')
+                         decay=0.5)
 
 # See the topics
-pprint(lda_model.print_topics(-1))
+pprint(lsi_model.print_topics(-1))
 
-#Interpreting LDA topic model's output
-for c in lda_model[corpus[5:8]]:
-    print("Document Topics      : ", c[0])      # [(Topics, Perc Contrib)]
-    print("Word id, Topics      : ", c[1][:3])  # [(Word id, [Topics])]
-    print("Phi Values (word id) : ", c[2][:2])  # [(Word id, [(Topic, Phi Value)])]
-    print("Word, Topics         : ", [(dct[wd], topic) for wd, topic in c[1][:2]])   # [(Word, [Topics])]
-    print("Phi Values (word)    : ", [(dct[wd], topic) for wd, topic in c[2][:2]])  # [(Word, [(Topic, Phi Value)])]
-    print("------------------------------------------------------\n")
 

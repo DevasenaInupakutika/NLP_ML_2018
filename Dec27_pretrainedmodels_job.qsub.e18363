@@ -1,0 +1,2 @@
+/bin/.: Permission denied.
+python: can't open file 'Dec27_pretrained_word2vec_fasttext.py': [Errno 2] No such file or directory

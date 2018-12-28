@@ -1,0 +1,5 @@
+. /etc/profile.d/modules.sh
+# Load one of these
+module load blas
+python Dec27_pretrained_word2vec_fasttext.py
+exit 0
