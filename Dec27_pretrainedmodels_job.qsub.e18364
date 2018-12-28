@@ -1,0 +1,20 @@
+/bin/.: Permission denied.
+/home-new/mmn609/.local/lib/python2.7/site-packages/scipy/__init__.py:115: UserWarning: Numpy 1.8.2 or above is recommended for this version of scipy (detected version 1.7.1)
+  UserWarning)
+RuntimeError: module compiled against API version 9 but this version of numpy is 7
+Traceback (most recent call last):
+  File "gensim_samples/Dec27_pretrained_word2vec_fasttext.py", line 1, in <module>
+    import gensim
+  File "/home-new/mmn609/.local/lib/python2.7/site-packages/gensim/__init__.py", line 5, in <module>
+    from gensim import parsing, corpora, matutils, interfaces, models, similarities, summarization, utils  # noqa:F401
+  File "/home-new/mmn609/.local/lib/python2.7/site-packages/gensim/parsing/__init__.py", line 4, in <module>
+    from .preprocessing import (remove_stopwords, strip_punctuation, strip_punctuation2,  # noqa:F401
+  File "/home-new/mmn609/.local/lib/python2.7/site-packages/gensim/parsing/preprocessing.py", line 40, in <module>
+    from gensim import utils
+  File "/home-new/mmn609/.local/lib/python2.7/site-packages/gensim/utils.py", line 40, in <module>
+    import scipy.sparse
+  File "/home-new/mmn609/.local/lib/python2.7/site-packages/scipy/sparse/__init__.py", line 231, in <module>
+    from .csr import *
+  File "/home-new/mmn609/.local/lib/python2.7/site-packages/scipy/sparse/csr.py", line 15, in <module>
+    from ._sparsetools import csr_tocsc, csr_tobsr, csr_count_blocks, \
+ImportError: numpy.core.multiarray failed to import

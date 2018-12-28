@@ -1,0 +1,33 @@
+import gensim
+from gensim.matutils import softcossim
+from gensim import corpora
+import gensim.downloader as api
+
+sent_1 = 'Sachin is a cricket player and a opening batsman'.split()
+sent_2 = 'Dhoni is a cricket player too He is a batsman and keeper'.split()
+sent_3 = 'Anand is a chess player'.split()
+
+word2vec_model300 = api.load('word2vec-google-news-300')
+#word2vec_model300 = [wd for wd in word2vec_model300]
+
+#dictionary = corpora.Dictionary(word2vec_model300)
+
+# Prepare the similarity matrix
+similarity_matrix = word2vec_model300.similarity_matrix(dictionary, tfidf=None, threshold=0.0, exponent=2.0, nonzero_limit=100)
+
+# Prepare a dictionary and a corpus.
+documents = [sent_1, sent_2, sent_3]
+dictionary = corpora.Dictionary(documents)
+
+# Convert the sentences into bag-of-words vectors.
+sent_1 = dictionary.doc2bow(sent_1)
+sent_2 = dictionary.doc2bow(sent_2)
+sent_3 = dictionary.doc2bow(sent_3)
+
+# Compute soft cosine similarity
+print(softcossim(sent_1, sent_2, similarity_matrix))
+
+print(softcossim(sent_1, sent_3, similarity_matrix))
+
+print(softcossim(sent_2, sent_3, similarity_matrix))
+
