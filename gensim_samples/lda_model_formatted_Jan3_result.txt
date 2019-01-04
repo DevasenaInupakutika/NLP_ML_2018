@@ -1,0 +1,39 @@
+(2361, 3)
+                                                 content           ...                      target_names
+10     From: irwin@cmptrc.lonestar.org (Irwin Arnstei...           ...                   rec.motorcycles
+10007  From: jet@netcom.Netcom.COM (J. Eric Townsend)...           ...                   rec.motorcycles
+10008  From: gld@cunixb.cc.columbia.edu (Gary L Dare)...           ...                  rec.sport.hockey
+10017  From: nstramer@supergas.dazixco.ingr.com (Naft...           ...             talk.politics.mideast
+10019  From: mussack@austin.ibm.com (Christopher Muss...           ...            soc.religion.christian
+
+[5 rows x 3 columns]
+[['from', 'irwin', 'arnstein', 'subject', 're', 'recommendation', 'on', 'duc', 'summary', 'whats', 'it', 'worth', 'distribution', 'usa', 'expires', 'sat', 'may', 'gmt', 'organization', 'computrac', 'inc', 'richardson', 'tx', 'keywords', 'ducati', 'gts', 'how', 'much', 'lines', 'have', 'line', 'on', 'ducati', 'gts', 'model', 'with', 'on', 'the', 'clock', 'runs', 'very', 'well', 'paint', 'is', 'the', 'bronze', 'brown', 'orange', 'faded', 'out', 'leaks', 'bit', 'of', 'oil', 'and', 'pops', 'out', 'of', 'st', 'with', 'hard', 'accel', 'the', 'shop', 'will', 'fix', 'trans', 'and', 'oil', 'leak', 'they', 'sold', 'the', 'bike', 'to', 'the', 'and', 'only', 'owner', 'they', 'want', 'and', 'am', 'thinking', 'more', 'like', 'any', 'opinions', 'out', 'there', 'please', 'email', 'me', 'thanks', 'it', 'would', 'be', 'nice', 'stable', 'mate', 'to', 'the', 'beemer', 'then', 'ill', 'get', 'jap', 'bike', 'and', 'call', 'myself', 'axis', 'motors', 'tuba', 'irwin', 'honk', 'therefore', 'am', 'computrac', 'richardson', 'tx', 'dod']]
+[(0,
+  '0.017*"write" + 0.015*"people" + 0.014*"organization" + 0.014*"article" + '
+  '0.013*"time" + 0.008*"give" + 0.008*"first" + 0.007*"tell" + 0.007*"new" + '
+  '0.007*"question"'),
+ (1,
+  '0.008*"christian" + 0.008*"believe" + 0.007*"god" + 0.007*"law" + '
+  '0.006*"state" + 0.006*"israel" + 0.006*"israeli" + 0.005*"exist" + '
+  '0.005*"way" + 0.004*"bible"'),
+ (2,
+  '0.024*"armenian" + 0.012*"bike" + 0.006*"kill" + 0.006*"work" + '
+  '0.005*"well" + 0.005*"year" + 0.005*"sumgait" + 0.005*"soldier" + '
+  '0.004*"way" + 0.004*"ride"'),
+ (3,
+  '0.019*"team" + 0.019*"game" + 0.013*"hockey" + 0.010*"player" + '
+  '0.009*"play" + 0.009*"win" + 0.009*"nhl" + 0.009*"year" + 0.009*"hawk" + '
+  '0.009*"season"')]
+   Document_No                        ...                                                                       Text
+0            0                        ...                          [irwin, arnstein, recommendation, duc, summary...
+1            1                        ...                          [eric, townsend, insurance, lotsa_point, reply...
+2            2                        ...                          [gary_dare, abc_coverage, reply, gary_dare, or...
+3            3                        ...                          [naftaly_stramer, peace_talk, reply, organizat...
+4            4                        ...                          [question, authority, trendy, liberal, feminis...
+5            5                        ...                          [harrass, work, prayer, reply, organization, u...
+6            6                        ...                          [andrew_infante, ok, little_hasty, organizatio...
+7            7                        ...                          [james_sledd, afterlife, organization, social,...
+8            8                        ...                          [canadien, stanley_cup, organization, canada, ...
+9            9                        ...                          [steve_gallichio, possible, canadian, wc, team...
+
+[10 rows x 5 columns]
